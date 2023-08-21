@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Logo from "../Assets/logo.jpg";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -10,34 +9,29 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
-      text: "Home",
-      icon: <HomeIcon />,
+      text: "Portfolio",
+      icon: <DeveloperModeIcon />,
     },
     {
-      text: "About",
+      text: "About Me",
       icon: <InfoIcon />,
     },
     {
-      text: "Testimonials",
+      text: "Resume",
       icon: <CommentRoundedIcon />,
     },
     {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
-    },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />,
     },
   ];
   return (
@@ -46,14 +40,10 @@ const Navbar = () => {
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Testimonials</a>
+        <a href="">Portfolio</a>
+        <a href="">About Me</a>
+        <a href="">Resume</a>
         <a href="">Contact</a>
-        <a href="">
-          <BsCart2 className="navbar-cart-icon" />
-        </a>
-        <button className="primary-button">Bookings Now</button>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
