@@ -149,9 +149,9 @@ nav {
   flex-direction: column;
 }
 .primary-subheading {
-  font-weight: 700;
-  color: #fe9e0d;
-  font-size: 1.15rem;
+  font-weight: 900;
+  color: #0b817f;
+  font-size: 2rem;
 }
 .about-buttons-container {
   margin-top: 2rem;
